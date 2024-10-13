@@ -1,0 +1,1984 @@
+:root {
+    --main-bg-color: #242526;
+    --alt-bg-color: #212121;
+    --text-color: #c9c8c3;
+    --text-color2: #54524f;
+    --text-color4: #767676;
+    --text-color3: #CEA4A0;
+    --primary-color: #101010; /* Main heading color */
+    --secondary-color: #d59e05; /* Subheading color */
+    --header-color: #361726;
+    --hlts-glry-radius: 20px;
+    --font-stack: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --animation-duration: 0.3s;
+    --nav-item-spacing:1rem;
+    --breakpoint-xxs: 280px;
+    --breakpoint-xs: 375px;
+    --breakpoint-x: 420px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-xxl: 1441px;
+    --breakpoint-xxxl: 1900px;
+
+    --modal-scrim-fill: rgba(50,50,50,0.48);
+    --modal-scrim-blur: 20px;
+    opacity: 1;
+    
+}
+
+
+
+body {
+    font-family: var(--font-stack);
+    font-size: 110%;
+    margin: 0;
+    padding: 0;
+    background-color: #b63838;
+    color: var(--text-color);
+    text-align: left;
+    font-weight: 600;
+    color: white;
+}
+
+/* --- container description*/
+
+img {max-width: 100%; /* S'adapte à la largeur du conteneur */
+    height: auto; /* Garde les proportions correctes */
+    object-fit: cover; /* Empêche la déformation en remplissant le conteneur */
+}
+
+
+
+
+.container {
+    width: 80vw; /* Occupe toute la largeur de la fenêtre */
+    max-width: 100%;
+    padding: 20px; /* Padding ajusté à 5% de la largeur de la fenêtre */
+    margin: 2vh auto;
+    background-color: #000;
+    border-radius: var(--hlts-glry-radius); /* Conserve la bordure arrondie */
+}
+
+ 
+  
+  
+  .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+    padding: 0 !important; /* Neutralise les paddings conflictuels */
+    margin: 0 !important;
+  }
+
+
+
+  .container2 {
+    width: 90vw; /* S'ajuste en fonction de la largeur de l'écran */
+    max-width: 60%; /* Limite la largeur à 500px sur les grands écrans */
+    padding: 20px; /* Padding ajusté à 5% de la largeur de la fenêtre */
+    margin: 2vh auto;
+    background-color: #101010;
+    border-radius: var(--hlts-glry-radius);
+    
+}
+
+    .container, .container2 {
+        border: none; /* Désactive les bordures */
+        box-shadow: none; /* Désactive les ombres */
+        outline: none; /* Supprime les contours */
+        overflow: hidden;
+        
+    }
+
+    
+
+    .text-center {
+        font-size: 4vw; /* Ajuste la taille de la police en fonction de la largeur de la fenêtre */
+        margin-bottom: 1.5vh; /* Ajuste la marge en bas à 2% de la hauteur de la fenêtre */
+        margin-top: 1.5vh; /* Ajuste la marge en haut à 2% de la hauteur de la fenêtre */
+        margin-left: 4vw;
+    }
+
+
+    .text-center2 {
+        font-size: 3vw; /* Ajuste la taille de la police en fonction de la largeur de la fenêtre */
+        margin-bottom: 3vh; /* Ajuste la marge en bas à 5% de la hauteur de la fenêtre */
+        margin-top: 1.5vh; /* Ajuste la marge en haut à 2% de la hauteur de la fenêtre */
+    }
+
+    .text-center h1 {
+        font-weight: 900;
+    font-size: 5vw; /* Adjust based on screen size */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                 0 0 20px rgba(255, 255, 255, 0.3),
+                 0 0 30px rgba(206, 164, 160, 0.8),
+                 0 0 40px rgba(206, 164, 160, 1);
+    color: #fff;
+    margin: 0;
+    }
+    @media (max-width: 768px) {
+        .text-center {
+            display: flex;
+            justify-content: center;
+            align-items: center ; 
+            flex-direction: column;
+            margin-left: 0vw;
+           
+        }  
+        .text-center h1 {
+            font-size: 8vw;
+            text-align: center;
+        }
+    }
+
+ 
+/* --- row description*/
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; /* Espace les éléments */
+    align-items: center;
+    margin-top: 2vh; /* Ajuste la marge du haut en fonction de la hauteur de la fenêtre */
+    gap: 3vw; /* Ajuste l'écart entre les colonnes en fonction de la largeur de la fenêtre */
+    row-gap: 1.5vh; /* Ajuste l'écart entre les lignes en fonction de la hauteur de la fenêtre */
+}
+/* Media query pour les petits écrans - les éléments passent en colonne */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Les éléments passent en colonne pour les petits écrans */
+        align-items: center;
+        gap: 2vh; /* Ajuste l'espace entre les colonnes lorsqu'elles sont en mode colonne */
+    }  
+}
+.img-container {
+    position: relative;
+    overflow: hidden; /* Empêche l'image de sortir du conteneur */
+    height: auto;
+    width: 100%;
+    flex: 0 1 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.img-fluid {
+    
+    width: 100%;
+    height: auto;
+   border-radius: var(--hlts-glry-radius);
+   margin-top: 2vh;
+}
+
+.fo {
+    font-size: 3.5vw; /* Ajuste la taille de la police en fonction de la largeur de la fenêtre */
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: .007vw; /* Ajuste l'espacement des lettres en fonction de la largeur de la fenêtre */
+    color: #cea4a0b5;
+    text-align: left;
+}
+
+.typography-site-body {
+    white-space: normal; /* Permet au texte de s'enrouler */
+    word-break: break-word; /* Casse les mots pour éviter les débordements */
+    hyphens: auto; /* Ajoute automatiquement des tirets lorsque des mots sont coupés */
+    line-height: 1.5;
+    letter-spacing: 0.01vw; /* Ajuste l'espacement des lettres pour éviter que les lettres se touchent */
+    font-size: 2vw; /* Ajuste la taille de la police en fonction de la largeur de la fenêtre */
+    text-align: left;
+    display: block;
+    font-weight: 400;
+}
+@media (max-width: 768px){
+    .typography-site-body {
+    font-size: 4vw;
+    }
+    .fo {
+        font-size: 4vw;
+    
+    }
+}
+
+
+.typography-site-body strong {
+    color: #86868b; /* Ou n'importe quelle autre couleur */
+}
+
+.img-fluid {
+    height: 50vw;
+    width: auto; /* Ajuste la largeur de l'image en fonction de la largeur de la fenêtre */
+}
+
+
+
+
+/* Conteneur flex pour aligner les colonnes et images */
+.container7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ligne flex pour assurer des colonnes égales */
+.row4 {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux colonnes de s'enrouler sur petits écrans */
+    justify-content: space-between;
+    gap: 2vw; /* Ajuste l'espace entre les colonnes */
+}
+
+/* Colonnes avec alignement vertical */
+.col-md-6 {
+    flex: 1; /* Assure que les deux colonnes prennent une largeur égale */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #101010; /* Si nécessaire, ajoute un fond pour les colonnes */
+    border-radius: var(--hlts-glry-radius);
+    padding: 1vw; /* Ajoute un peu d'espace autour du contenu */
+}
+
+/* Image dans les colonnes */
+.modal-image {
+    width: 100%; /* L'image occupe toute la largeur de la colonne */
+    height: 35vh; /* Ajustement pour la hauteur de l'image */
+    object-fit: cover; /* Assure que l'image couvre bien son conteneur sans déformation */
+    border-radius: var(--hlts-glry-radius);
+}
+
+/* Titre et texte pour chaque section */
+.title-LW {
+    font-size: 1.8vw; /* Taille du titre ajustée en fonction de la largeur de l'écran */
+    color: #CEA4A0;
+    margin-top: 1vh;
+}
+
+.text-LW {
+    font-size: 1.2vw; /* Taille du texte ajustée en fonction de la largeur de l'écran */
+    color: #c9c8c3;
+    margin-top: 0.5vh;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+    .row4 {
+        flex-direction: column; /* Les colonnes passent en vertical sur petits écrans */
+        gap: 2vh; /* Espacement ajusté pour les petits écrans */
+    }
+
+    .modal-image {
+        height: 30vh; /* Réduit la taille des images pour les petits écrans */
+    }
+
+    .title-LW {
+        font-size: 5vw; /* Taille plus grande pour les petits écrans */
+        
+    }
+
+    .text-LW {
+        font-size: 4vw; /* Ajuste la taille du texte pour les petits crans */
+       
+    }
+}
+
+ .row3 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+    justify-content: left;
+   
+    gap: 60px;
+    row-gap: 20px;
+   
+  } 
+
+
+@media (min-width: 768px){
+    .row3 {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 8.5vw;
+        justify-content: center;
+        gap: 10px;
+        row-gap: 2px;
+    }
+
+}
+
+  
+.title-LW {
+    font-size: 4vw; /* Correspond à environ 25px sur un écran large */
+    font-weight: 600;
+    font-family: var(--font-stack);
+    margin-left: 0vh;
+    margin-top: 2vh; /* Ajusté pour une meilleure adaptation en fonction de la hauteur de l'écran */
+    margin-bottom: 2vh; /* Marges ajustées pour être basées sur la hauteur de la fenêtre */
+    text-align: left;
+    line-height: 1.2; /* Ajusté pour une meilleure lisibilité */
+    letter-spacing: 0.1vw; /* Ajusté en fonction de la largeur de l'écran */
+    
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(206, 164, 160, 0.8),
+    0 0 40px rgba(206, 164, 160, 1);
+color: #fff;
+margin: 0;
+
+}
+@media (max-width: 768px) {
+    .title-LW {
+        font-size: 5vw; /* Texte plus grand sur les petits écrans pour une meilleure lisibilité */
+        text-align: center;
+        top: 0.1vh; /* Augmentation de l'espace supérieur pour un meilleur espacement */
+        margin-bottom: 2vh; /* Espace inférieur augmenté pour une meilleure séparation */
+        line-height: 1.4; /* Hauteur de ligne augmentée pour un meilleur espacement du texte */
+        letter-spacing: 0.2vw; /* Espacement entre les lettres légèrement augmenté pour une meilleure lisibilité */
+    }
+    h5.title2-LW {
+        font-size: 5vw; /* Texte plus grand sur les petits écrans pour une meilleure lisibilité */
+        text-align: center;
+        top: 0.1vh; /* Augmentation de l'espace supérieur pour un meilleur espacement */
+        margin-bottom: 2vh; /* Espace inférieur augmenté pour une meilleure séparation */
+        line-height: 1.4; /* Hauteur de ligne augmentée pour un meilleur espacement du texte */
+        letter-spacing: 0.2vw; /* Espacement entre les lettres légèrement augmenté pour une meilleure lisibilité */
+    }
+}
+.title2-LW {
+    font-size: 3vw; /* Texte plus grand sur les petits écrans pour une meilleure lisibilité */
+    margin-top: 2vh; /* Augmentation de l'espace supérieur pour un meilleur espacement */
+    margin-bottom: 2vh; /* Espace inférieur augmenté pour une meilleure séparation */
+    line-height: 1.4; /* Hauteur de ligne augmentée pour un meilleur espacement du texte */
+    letter-spacing: 0.2vw; /* Espacement entre les lettres légèrement augmenté pour une meilleure lisibilité */
+}
+
+.text-LW {
+    font-size: 2.5vw; /* Environ équivalent à 20px sur un écran large */
+    font-weight: 400;
+    font-family: var(--font-stack);
+    text-align: left;
+    margin-top: 2vh; /* Ajusté en fonction de la hauteur de la fenêtre */
+    margin-left: 0vh;
+    margin-right: 2vh;
+    letter-spacing: 0.03vw; /* Ajusté en fonction de la largeur de la fenêtre */
+    line-height: 1.4; /* Légèrement augmenté pour la lisibilité */
+    color: white;
+}
+@media (max-width: 768px) {
+    .text-LW {
+        font-size: 4vw; /* Taille plus grande sur les petits écrans pour la lisibilité */
+        margin-top: 2vh; /* Augmentation de l'espace supérieur pour une meilleure respiration */
+        letter-spacing: 0.05vw; /* Espacement légèrement augmenté pour améliorer la lisibilité */
+        line-height: 1.4; /* Augmenté pour rendre le texte plus espacé sur les petits écrans */
+        color: #fff;
+        text-align: center;
+    }
+    h5.text2-LW {
+        font-size: 3.5vw; /* Taille plus grande sur les petits écrans pour la lisibilité */
+        margin-top: 2vh; /* Augmentation de l'espace supérieur pour une meilleure respiration */
+        letter-spacing: 0.05vw; /* Espacement légèrement augmenté pour améliorer la lisibilité */
+        line-height: 1.4; /* Augmenté pour rendre le texte plus espacé sur les petits écrans */
+        color: #fff;
+        text-align: center;
+    }
+}
+
+.text2-LW {
+    font-size: 2vw; /* Taille plus grande sur les petits écrans pour la lisibilité */
+    margin-top: 2vh; /* Augmentation de l'espace supérieur pour une meilleure respiration */
+    letter-spacing: 0.05vw; /* Espacement légèrement augmenté pour améliorer la lisibilité */
+    line-height: 1.4; /* Augmenté pour rendre le texte plus espacé sur les petits écrans */
+    color: #fff;
+    text-align: left;
+}
+
+.col-1 {
+   
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+   
+} 
+.col-lg-6 {
+   flex: 0 1 48%;
+   margin-left: 4vw;
+    
+}
+
+
+
+
+
+/* --- button*/
+
+ 
+.button {
+    display: flex;
+    margin-top: 2vh; /* Ajuste la marge du haut à 2% de la hauteur de la fenêtre */
+    margin-left: 4vw;
+}
+
+.btn-lg, .btn {
+    padding: 1vw; /* Ajuste le padding à gauche en fonction de la largeur de la fenêtre */
+    font-size: 2.5vw; /* Ajuste la taille de la police en fonction de la largeur de la fenêtre */
+    font-weight: 400;
+    line-height: 1.2;
+    border-radius: 3vw; /* Ajuste le rayon de bordure en fonction de la largeur de la fenêtre */
+}
+@media (max-width: 768px) {
+    .btn-lg, .btn {
+        padding: 2vw; /* Ajuste le padding à gauche en fonction de la largeur de la fenêtre */
+        font-size: 4vw; /* Ajuste la taille de la police en fonction de la largeur de la fenêtre */
+    }
+}
+
+.btn-primary {
+    color: #CEA4A0;
+    background-color: #333333;
+    border-color: #cea4a000;
+    
+    font-weight: 600;
+
+}
+
+.btn {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+.typography-site-body strong {
+    translate: Y(var(--text-color3));
+    color: #767676;
+}
+
+.header-text {
+    white-space: normal;
+    word-break: break-word;
+    hyphens: auto;
+    margin-top: auto; /* Ajustement basé sur la hauteur de la fenêtre */
+    margin-bottom: 10vh;
+    margin-left: 10vw; /* Ajustement basé sur la largeur de la fenêtre */
+    margin-right: 10vw;
+    color: #c9c8c3;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+/* --- Navbar description --- */
+/* Navbar container */
+/* --- General Header Styling --- */
+
+
+/* General Navbar Styles */
+/* General Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0000008b;
+    position: fixed;
+    width: 100%;
+    height: 4.5vw;
+    top: 0;
+    z-index: 1000;
+}
+.header-logo {
+    width: auto;
+    height: 4.5vw;
+    margin-left: 6vw;
+    margin-top: 1vw;
+}
+.logo a img {
+    width: auto;
+    height: 3vw;
+    margin-left: 8vw;
+    margin-top: 1vw;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-right: 10vw;
+    margin-top: 1vw;
+    padding: 0;
+}
+.nav-menu li {
+    text-align: center;
+    padding: 10px;
+    width: auto;
+}
+
+.nav-menu.is-active {
+    display: flex;
+}
+ 
+
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-menu li a:hover {
+    color: #CEA4A0;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0000008b;
+    min-width: 100px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: auto;
+    right: 10vw;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown-content a:hover {
+   
+    color: rgba(0, 0, 0, 0.2);
+}
+.dropdown-content li {
+    color: #fff;
+    
+}
+.dropdown-content li:hover {
+    color: #CEA4A0;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    text-align: left;
+}
+.dropdown-content.show {
+    display: block;
+   
+    
+}
+/* Burger Menu Styles */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+        margin-right: 10vw;
+    }
+    .logo a img {
+        width: auto;
+        height: 5vw;
+        margin-left: 8vw;
+        margin-top: 1vw;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000000eb;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 100;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .nav-menu.is-active {
+        display: flex;
+    }
+    .dropdown-content {
+        right: 30vw;
+        top: auto;
+        border-radius: 0px 0px 20px 20px;
+        background-color: #000000eb;
+    }   
+}
+
+
+    
+
+    .header-text h1 {
+        font-size: 6vw;
+    }
+
+    .header-text h6 {
+        font-size: 4vw;
+    }
+    
+
+/* Gallery Filter Menu */
+#myBtnContainer {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    margin-top: 45px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+   
+
+    padding: 10px;
+    border-radius: 5px;
+    width: -webkit-fill-available;
+}
+.btn2 {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #ffffff90;
+    color: #000;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn2.active {
+    background-color: #CEA4A0;
+    color: #fff;
+}
+
+
+/* La classe "show" définit l'affichage */
+.show {
+    display: block; /* Make elements visible when filtered */
+    flex: 0 1 calc(33.333% - 20px); /* Make each item take up one-third of the row minus the gap */
+    box-sizing: border-box;
+}
+/* Mobile Gallery Styling */
+@media (max-width: 768px) {
+    .show {
+        flex: 0 1 calc(50% - 20px); /* Make items take up half of the row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .show {
+        flex: 0 1 100%; /* Make items take up the full width on very small screens */
+    }
+}
+/* Cache les éléments par défaut */
+.column {
+    display: block;
+}
+
+
+/* --- Font description*/
+
+hr {
+    display: flex;
+    flex-wrap: wrap;
+    unicode-bidi: isolate;
+    margin-block-start: 2vh; /* Utilisation de la hauteur de la fenêtre pour les marges */
+    margin-block-end: 2vh;   /* Utilisation de la hauteur de la fenêtre pour les marges */
+    overflow: hidden;
+}
+
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    max-width: 90vw; /* Limite la largeur à 90% de la largeur de la fenêtre */
+    font-weight: 600;
+    font-size: 10vw; /* Ajuste la taille de la police en fonction de la largeur de la fenêtre */
+    line-height: 1;
+    letter-spacing: -0.015em;
+    margin-top: 1vh; /* Marges basées sur la hauteur de la fenêtre */
+    margin-bottom: 0;
+    margin-left: 4vh;
+    margin-right: 0;
+    color: #CEA4A0;
+}
+
+h2 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    font-weight: 600;
+    font-size: 3.5vw; /* Ajuste la taille de la police en fonction de la largeur de la fenêtre */
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+    margin-top: 1vh; /* Marges en fonction de la hauteur de la fenêtre */
+    margin-bottom: 0;
+    margin-left: 5vh;
+    margin-right: 0;
+    color: #c9c8c3;
+}
+
+h3 {
+    display: block;
+    text-align: left;
+    font-size: 7vw; /* Ajuste la taille de la police à 7% de la largeur de la fenêtre */
+}
+
+h6 {
+    display: flex;
+    text-align: left;
+    font-size: 2.5vw; /* Ajuste la taille de la police à 2.5% de la largeur de la fenêtre */
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.007em;
+    margin-top: 0vh; /* Marges ajustées en vh pour plus de fluidité */
+    margin-bottom: 0vh;
+    margin-left: 0vh;
+    color: #86868b;
+}
+
+h4 {
+    margin-top: 2vh; /* Marges en haut et en bas ajustées à la hauteur de la fenêtre */
+    margin-bottom: 2vh;
+    font-size: 3vw; /* Ajuste la taille de la police à 3% de la largeur de la fenêtre */
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: 0.007em;
+    color: #cea4a0;
+    text-align: center;
+}
+
+h5 {
+    margin-top: 2vh; /* Ajuste la marge supérieure à 2% de la hauteur de la fenêtre */
+    margin-bottom: 1vh; /* Ajuste la marge inférieure à 1% de la hauteur de la fenêtre */
+    margin-left: 0;
+    font-weight: 600;
+    font-size: 2vw; /* Ajuste la taille de la police à 2% de la largeur de la fenêtre */
+    line-height: 1.3;
+    letter-spacing: 0.015em;
+    text-align: left;
+    color: #CEA4A0;
+}
+@media (max-width: 768px) {
+    h5 {
+        text-align: center;
+        
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-top: 0.5vh; /* Ajuste la marge en fonction de la hauteur de la fenêtre */
+    margin-left: 0vw;
+    margin-right: 0.5vw; /* Ajuste la marge droite à 0.5% de la largeur de la fenêtre */
+    margin-bottom: 0vh;
+    font-size: 2vw; /* Ajuste la taille de la police à 2% de la largeur de la fenêtre */
+    font-weight: 600;
+    letter-spacing: 0.011em;
+    line-height: 1.4;
+    color: #c9c8c3;
+    text-align: left;
+}
+/* Full-width photo container */
+.full-width-photo-container {
+    position: relative;
+    width: 100%;
+}
+
+.full-width-photo {
+    width: 100%;
+    height: auto;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.header-text h1 {
+    font-size: 5vw; /* Ajuste la taille du texte en fonction de la largeur de l'écran */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(206, 164, 160, 0.8),
+    0 0 40px rgba(206, 164, 160, 1);
+color: #fff;
+margin: 0;
+}
+
+.header-text h6 {
+    font-size: 2.5vw; /* Ajuste la taille du texte en fonction de la largeur de l'écran */
+    margin-top: 2vw;
+    color: #CEA4A0; /* Couleur personnalisée pour le texte secondaire */
+}
+@media (max-width: 768px) {
+    .header-text h6 {
+        font-size: 3.5vw;
+        margin-top: 2vw;
+    }
+}
+
+
+/* Conteneur du texte par-dessus l'image */
+
+/* Conteneur de texte sur l'image */
+/* Styles par défaut pour les écrans plus larges */
+.header-Abouttext-container {
+    position: absolute;
+    top: 48vw;
+    left: 15%; 
+    transform: translateX(-50%);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.468); 
+    border-radius: 0px 20px 20px 0px;
+    width: 30vw;
+    height: 13vw;
+    padding: 0.5vh 0.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.header-Abouttext h1 {
+    font-size: 4.5vw;
+    font-weight: bold;
+    margin: 1.8vw;
+
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                 0 0 20px rgba(255, 255, 255, 0.3),
+                 0 0 30px rgba(206, 164, 160, 0.8),
+                 0 0 40px rgba(206, 164, 160, 1.2);
+    color: #fff;
+}
+
+.header-Abouttext h6 {
+    font-size: 3.5vw;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                 0 0 20px rgba(255, 255, 255, 0.3),
+                 0 0 30px rgba(206, 164, 160, 0.8),
+                 0 0 40px rgba(206, 164, 160, 1.2);
+    color: #fff;
+    margin: 1.8vw;
+    
+  
+}
+
+/* Media query pour les écrans de largeur maximale 768px (mobile) */
+@media (max-width: 768px) {
+    .header-Abouttext-container {
+        top: 48vw; /* Ajustement de la position verticale sur mobile */
+        left: 15%; /* Centrer complètement sur mobile */
+        width: 30vw; /* Augmenter la largeur sur mobile */
+        height: 15vw; /* Ajuster la hauteur au contenu */
+        padding: 0.5vh 0.5vw; /* Ajouter plus de padding pour l'espacement du texte */
+        border-radius: 0px 10px 10px 0px; /* Arrondir uniformément les coins sur mobile */
+        justify-content: center;
+    }
+
+    .header-Abouttext h1 {
+        font-size: 4.5vw; /* Augmenter légèrement la taille du texte sur mobile */
+        margin-left: 1.8vw;
+    }
+
+    .header-Abouttext h6 {
+        font-size: 3.5vw; /* Augmenter la taille du sous-titre sur mobile */
+        margin-top: 0.5vw; /* Ajouter un peu d'espace au-dessus du texte */
+        margin-left: 1.8vw;
+    }
+}
+
+
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 0;
+}
+
+
+
+
+
+/* section dark */
+.container-dark {
+    background-color: #000;
+    position: relative;
+    text-align: left;
+    color: black; /* Ou toute autre couleur que vous préférez */
+    overflow: hidden;
+    outline: none; /* Supprime les contours */
+    border: none; /* Supprime les bordures */
+    padding-top: 5vh;
+}
+
+.photo {
+    width: 100vw; /* Ajusté à 100% de la largeur de la fenêtre */
+    height: auto; /* Conserve le ratio de l'image */
+    display: block;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3); /* Ajuste l'ombre à l'aide de vw */
+    background-color: #000;
+}
+
+.Sittelle-text {
+    position: absolute;
+    top: 10vh; /* Positionnement en fonction de la hauteur de la fenêtre */
+    left: 10vw; /* Positionnement en fonction de la largeur de la fenêtre */
+    transform: translate(0);
+    color: white; /* Ajuster selon vos besoins */
+    margin: 0;
+    margin-bottom: 1vh; /* Ajusté avec vh pour la marge en bas */
+    padding: 0;
+    max-width: 80vw; /* Ajusté pour être responsive en fonction de la largeur de la fenêtre */
+}
+
+.Sittelle-text h3 {
+    font-size: 5vw; /* Ajusté à 7% de la largeur de la fenêtre */
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.011em;
+    margin-bottom: 1vh;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                 0 0 20px rgba(255, 255, 255, 0.3),
+                 0 0 30px rgba(206, 164, 160, 0.8),
+                 0 0 40px rgba(206, 164, 160, 1);
+    color: #fff;
+    margin: 0;
+}
+
+.Sittelle-text h2 {
+    font-size: 4vw; /* Ajusté à 2% de la largeur de la fenêtre */
+    line-height: 0.9;
+    font-weight: 600;
+    letter-spacing: 0.007em;
+    color: #d1a9a5;
+}
+@media (max-width: 768px) {
+    .Sittelle-text {
+        
+        top: 16vw;
+        margin-bottom: 1vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+    .Sittelle-text h2 {
+        font-size: 4vw;
+        margin-top: 1vw;
+        text-align: center;
+    }
+    .Sittelle-text h3 {
+        font-size: 6vw;
+        top: 0.5vw;
+        text-align: center;
+    }
+}
+
+
+/* Carouselle section dark */
+
+
+
+
+.text-area {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0; /* Padding autour du texte */
+    margin-bottom: 0 auto;
+    margin-top: 0 auto; /* Ajusté avec vh pour la marge supérieure */
+    margin-left: 1vw; /* Ajusté avec vw pour la marge gauche */
+    margin-right: 1vw; /* Ajusté avec vw pour la marge droite */
+    text-align: left;
+    justify-items: left;
+}
+
+.text-area h2 {
+    font-size: 2.2vw; /* Ajusté à 6% de la largeur de la fenêtre pour le titre */
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.007em;
+    color: white;
+}
+@media (max-width: 768px) {
+    .text-area h2 {
+        font-size: 4vw;
+        text-align: center;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+
+    }
+}
+
+.text-area p {
+    font-size: 2.2vw; /* Ajusté à 4% de la largeur de la fenêtre pour le paragraphe */
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.007em;
+    color: #CEA4A0;
+    margin-top: 1vw;
+}
+@media (max-width: 768px) {
+    .text-area p {
+        font-size: 3.8vw;
+        text-align: center;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+
+    }
+}
+@media (min-width: 280px) {
+    .slider-container {
+        display: flex;
+        flex-wrap: nowrap;
+        }
+    }
+
+        
+        @media (min-width: 375px) {
+            .slider-container {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                }
+            }
+
+                 
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw; /* Largeur ajustée à 100% de la largeur de la fenêtre */
+    height: 150vh; /* Hauteur ajustée à 150% de la hauteur de la fenêtre */
+    background-color: #000;
+  }
+  
+  p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  p:hover,
+  p:focus {
+    outline: auto;
+    text-decoration: solid;
+  }
+  
+      
+
+/* carousel */
+
+
+
+       
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background-color: #000;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    outline: none; /* Supprime les contours */
+    border: none; /* Supprime les bordures */
+}
+@media (min-width: 280px){
+    .slideshow-container {
+    max-width: 600px;
+    align-items: center;
+    
+}
+}
+
+@media (min-width: 375px){
+    .slideshow-container {
+    max-width: 370px;
+    align-items: center;
+    
+}
+}
+@media (min-width: 576px){
+    .slideshow-container {
+    max-width: 550px;
+    align-items: center;
+    
+}
+}
+@media (min-width: 992px){
+    .slideshow-container {
+    max-width: 950px;
+    align-items: center;
+    
+}
+}
+@media (min-width: 1280px){
+    .slideshow-container {
+    max-width: 1200px;
+    align-items: center;
+    
+}
+}
+/* Hide the images by default */
+.mySlides {
+    display: none; /* Toutes les slides sont cachées par défaut */
+    position: relative; /* Position absolue pour les superposer */
+    top: 0;
+    left: 0;
+    width: 100%; /* S'assure que les slides prennent toute la largeur */
+    height: auto; /* Ajuste la hauteur automatiquement */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #CEA4A0;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #000;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* modal section dark */
+
+
+
+
+
+/* The Modal (background) */
+
+.modal2{
+    display: none; /* Masqué par défaut */
+    position: fixed; /* Resté en place même pendant le scroll */
+    z-index: 2; /* Assuré que la modale soit au-dessus du reste */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Prend toute la largeur de la fenêtre */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    overflow: auto; /* Active le scroll si nécessaire */
+    
+    border-color: #212121;
+    background-color: rgba(0, 0, 0, 0.4); /* Fond noir avec opacité */
+    backdrop-filter: blur(5px); /* Effet de flou sur le fond */
+    -webkit-backdrop-filter: blur(5px); /* Effet de flou pour Safari */
+}
+
+@media (max-width: 768px) {
+    .modal2 {
+        backdrop-filter: blur(3px); /* Réduit légèrement le flou sur les petits écrans */
+        -webkit-backdrop-filter: blur(3px); /* Pour Safari */
+        padding: 2vh 2vw; /* Ajoute du padding pour donner de l'espace au contenu sur les petits écrans */
+    }
+}
+
+.container3 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+     padding: 5px;
+     margin-right: 10%;
+     margin-left: 10%;
+   }
+  
+  
+   
+   .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+     width: auto;
+     padding-right: 15px;
+     padding-left: 15px;
+     margin-right: 2rem;
+     margin-left: 2rem;
+   }
+
+   hr2 {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    overflow: hidden;
+    
+   }
+.l2-horizontal-rule {
+    background: #333333;
+    
+    height: 1px;
+    margin-inline-start: 15%;
+    margin-inline-end: 15%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    border: none;
+}
+
+
+
+
+
+/* Modal Content/Box */
+.modal-content {
+    position: relative;
+    z-index: 1;
+    background-color: #000;
+    margin: 5% auto; /* 15% from the top and centered */
+    
+    padding: 20px;
+    border: 1px solid #212121;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-height: 90vh;
+    overflow: auto; /* Enable scroll if needed */
+    border-radius: 30px;
+}
+.page-content {
+    position: relative;
+    z-index: 1;
+}
+
+.fa-instagram {
+    font-size: 150px;
+    margin-bottom: -150%;
+    margin-left: 4vh;
+    color: #CEA4A0;
+    margin-top: 3vh;
+    
+}
+@media (min-width: 768px){
+    .fa-instagram {
+        font-size: 15vw;
+        margin-left: 35vw;
+        color: #CEA4A0;
+        margin-top: 1vh;
+        text-align: center;
+    }
+}
+/* Close button */
+.close {
+    position: absolute;
+    top: 5vw;
+    right: 10vw;
+  
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 4; /* Make sure it's above the modal content */
+    cursor: pointer;
+    
+}
+.hidden {
+    display: none;
+}
+.close:hover,
+.close:focus {
+    color: #CEA4A0;
+    text-decoration: none;
+    cursor: pointer;
+   
+}
+/* Add styles for the image */
+.modal-image {
+    max-width: 100%; /* This will ensure the image is responsive */
+    height: auto;
+    border-radius: var(--hlts-glry-radius);
+    
+}
+.fixed-button {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    left: 50%; /* Centré horizontalement */
+    transform: translateX(-50%);
+    padding: 1vw;
+    font-size: 2.5vw;
+    font-weight: 600;
+    background-color: #121212e3;
+    color: #fff;
+    border: 2px solid #8e190e;
+    border-radius: 3vh;
+    cursor: pointer;
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed-button.show {
+    display: flex; /* Affiché quand la classe "show" est ajoutée */
+}
+
+.fixed-button .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CEA4A0;
+    color: white;
+    font-size: 3.5vh;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    margin-left: 1vh;
+}
+
+@media (max-width: 768px) {
+    .fixed-button {
+        font-size: 2vh;
+        padding: 0.5vh;
+    }
+    
+    .fixed-button .icon {
+        font-size: 2.5vh;
+        width: 2vh;
+        height: 2vh;
+    }
+}
+
+
+.container4 {
+    width: auto;
+    padding: 0rem;
+     margin-right: 10%;
+     margin-left: 10%;
+}
+
+      /* --- aboutMe Modal*/
+    
+      .modal {
+        display: none;
+        position: fixed; /* Stay in place */
+        z-index: 3; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        overflow: auto; /* Active le défilement si nécessaire */
+
+    }      
+    
+    .modal-content2 {
+        position: relative;
+        z-index: 1000;
+        background-color: #212121;
+        margin: 5vh auto; /* 5% de la hauteur de l'écran pour l'espacement vertical */
+        
+        padding: 2vh 2vw; /* Padding ajusté pour s'adapter à l'écran */
+        border: 1px solid #212121;
+        width: 80vw; /* Largeur définie en fonction de la largeur de la fenêtre */
+        max-height: 90vh; /* Hauteur maximale définie en fonction de la hauteur de la fenêtre */
+        overflow: auto; /* Active le défilement si nécessaire */
+        border-radius: 3vw; /* Border-radius en fonction de la largeur de l'écran */
+    }
+    
+    @media (max-width: 768px) {
+        .modal-content2 {
+            width: 90vw; /* Largeur augmentée pour occuper presque toute la fenêtre */
+            max-height: 80vh; /* Hauteur réduite pour mieux s'adapter aux petits écrans */
+            padding: 4vh 4vw; /* Plus de padding pour donner de l'espace sur les petits écrans */
+            border-radius: 5vw; /* Des coins plus arrondis pour les petits écrans */
+        }
+    }
+    
+.modal-content3 {
+    position: relative;
+    z-index: 3;
+    background-color: #212121;
+    margin: 5vh auto; /* 5% de la hauteur de l'écran pour l'espacement vertical */
+    
+    padding: 2vh 2vw; /* Padding ajusté pour s'adapter à l'écran */
+    border: 1px solid #212121;
+    width: 80vw; /* Largeur définie en fonction de la largeur de la fenêtre */
+    max-height: 90vh; /* Hauteur maximale définie en fonction de la hauteur de la fenêtre */
+    overflow: auto; /* Active le défilement si nécessaire */
+    border-radius: 3vw; /* Border-radius en fonction de la largeur de l'écran */
+}
+
+
+
+@media (max-width: 768px){
+    .modal-content3 {
+        width: 90vw; /* Largeur augmentée pour occuper presque toute la fenêtre */
+        max-height: 80vh; /* Hauteur réduite pour mieux s'adapter aux petits écrans */
+        padding: 4vh 4vw; /* Plus de padding pour donner de l'espace sur les petits écrans */
+        border-radius: 5vw; /* Des coins plus arrondis pour les petits écrans */
+    }
+}
+.modal-content4 {
+    position: relative;
+    z-index: 3;
+    background-color: #212121;
+    margin: 5vh auto; /* 5% de la hauteur de l'écran pour l'espacement vertical */
+    
+    padding: 2vh 2vw; /* Padding ajusté pour s'adapter à l'écran */
+    border: 1px solid #212121;
+    width: 80vw; /* Largeur définie en fonction de la largeur de la fenêtre */
+    max-height: 90vh; /* Hauteur maximale définie en fonction de la hauteur de la fenêtre */
+    overflow: auto; /* Active le défilement si nécessaire */
+    border-radius: 3vw; /* Border-radius en fonction de la largeur de l'écran */
+}
+
+
+
+@media (max-width: 768px){
+    .modal-content4 {
+        width: 90vw; /* Largeur augmentée pour occuper presque toute la fenêtre */
+        max-height: 80vh; /* Hauteur réduite pour mieux s'adapter aux petits écrans */
+        padding: 4vh 4vw; /* Plus de padding pour donner de l'espace sur les petits écrans */
+        border-radius: 5vw; /* Des coins plus arrondis pour les petits écrans */
+    }
+}
+.about-text {
+    
+    font-weight: 600;
+    font-family: var(--font-stack);
+    margin-left: 2vh;
+    margin-top: 2vh; /* Ajusté pour une meilleure adaptation en fonction de la hauteur de l'écran */
+    margin-bottom: 2vh; /* Marges ajustées pour être basées sur la hauteur de la fenêtre */
+    text-align: left;
+    line-height: 1.2; /* Ajusté pour une meilleure lisibilité */
+    letter-spacing: 0.1vw; /* Ajusté en fonction de la largeur de l'écran */
+    
+    font-size: 4.5vw;
+   
+    margin: 1.8vw;
+
+   
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                 0 0 20px rgba(255, 255, 255, 0.3),
+                 0 0 30px rgba(206, 164, 160, 0.8),
+                 0 0 40px rgba(206, 164, 160, 1.2);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 5vw; /* Texte plus grand sur les petits écrans pour une meilleure lisibilité */
+        margin-top: 2vh; /* Augmentation de l'espace supérieur pour un meilleur espacement */
+        margin-bottom: 2vh; /* Espace inférieur augmenté pour une meilleure séparation */
+        line-height: 1.4; /* Hauteur de ligne augmentée pour un meilleur espacement du texte */
+        letter-spacing: 0.2vw; /* Espacement entre les lettres légèrement augmenté pour une meilleure lisibilité */
+    }
+}
+
+
+.about-sub {
+    font-size: 3vw; /* Environ équivalent à 20px sur un écran large */
+    font-weight: 400;
+    font-family: var(--font-stack);
+    text-align: left;
+    margin-top: 2vh; /* Ajusté en fonction de la hauteur de la fenêtre */
+    margin-left: 2vh;
+    margin-right: 2vh;
+    letter-spacing: 0.03vw; /* Ajusté en fonction de la largeur de la fenêtre */
+    line-height: 1.2; /* Légèrement augmenté pour la lisibilité */
+    color: white;
+}
+@media (max-width: 768px) {
+    .about-sub {
+        font-size: 4vw; /* Taille plus grande sur les petits écrans pour la lisibilité */
+        margin-top: 2vh; /* Augmentation de l'espace supérieur pour une meilleure respiration */
+        letter-spacing: 0.05vw; /* Espacement légèrement augmenté pour améliorer la lisibilité */
+        line-height: 1.4; /* Augmenté pour rendre le texte plus espacé sur les petits écrans */
+        color: #fff;
+    }
+}
+
+
+
+.autre-text {
+    font-size: 300px;
+    font-weight: 600;
+   
+    font-family: var(--font-stack);
+    text-align: left;
+    line-height: 1;
+    letter-spacing: 0.001;
+    color: #54524f;
+    margin-top: 70px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+@media (min-width: 280px){
+    .autre-text{
+        font-size: 26px;
+        font-weight: 600;
+        font-family: var(--font-stack);
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        letter-spacing: 0.02em;
+        line-height: 1.1;
+        color: #c9c8c3;
+    }
+}
+
+
+@media (min-width: 375px){
+    .autre-text{
+        font-size: 26px;
+        font-weight: 600;
+        font-family: var(--font-stack);
+        text-align: center;
+        margin-top: 20px;
+        letter-spacing: 0.05em;
+        line-height: 1.1;
+        color: #c9c8c3;
+    }
+}
+
+@media (min-width: 576px){
+    .autre-text{
+        font-size: 25px;
+        font-weight: 600;
+        font-family: var(--font-stack);
+        text-align: left;
+        margin-top: 0%;
+        letter-spacing: 0.05em;
+        line-height: 1.1;
+        color: #c9c8c3;
+    }
+}
+
+
+@media (min-width: 768px){
+    .autre-text{
+        font-size: 28px;
+        font-weight: 600;
+        font-family: var(--font-stack);
+        text-align: center;
+        margin-top: 15px;
+        letter-spacing: 0.05em;
+        line-height: 1.1;
+        color: #c9c8c3;
+    }
+}
+.autre-sub {
+    font-size: 2vw; /* Correspond à environ 30px sur un écran large */
+    font-weight: 400;
+    font-family: var(--font-stack);
+    font-style: normal;
+    text-align: left;
+    margin-left: 1.5vw; /* Ajusté en fonction de la largeur de l'écran */
+    margin-right: 1.5vw; /* Ajusté en fonction de la largeur de l'écran */
+    margin-top: 1vh; /* Ajusté en fonction de la hauteur de la fenêtre */
+    letter-spacing: -0.022em; /* Ajusté pour garder un bon espacement entre les lettres */
+    line-height: 1.8; /* Garde la même hauteur de ligne */
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .autre-sub {
+        font-size: 4vw; /* Texte plus grand sur les petits écrans pour une meilleure lisibilité */
+        margin-left: 3vw; /* Ajusté pour des marges plus larges sur de petits écrans */
+        margin-right: 3vw; /* Ajusté pour des marges plus larges sur de petits écrans */
+        margin-top: 2vh; /* Plus d'espace au-dessus pour donner de l'air au texte */
+        letter-spacing: 0.02vw; /* Espacement légèrement augmenté pour de meilleures proportions */
+        line-height: 1.5; /* Hauteur de ligne augmentée pour améliorer la lisibilité */
+    }
+}
+
+.photo2{
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 8px 0 #c9c8c3(0, 0, 0, 0.3); 
+
+}
+
+/* The Close Button */
+.closeAboutMeModal {
+    color: #CEA4A0;
+    float: right;
+    margin-right: 10px;
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+.closeAboutMe {
+    color: #CEA4A0;
+    float: right;
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+.closeAboutMeModal:hover,
+.closeAboutMeModal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The Contact form */
+
+.contact-form {
+    max-width: 40vw; /* Correspond à 500px sur un écran large */
+    margin: 0 auto;
+    margin-bottom: 2vh; /* Ajusté pour une hauteur relative */
+    padding: 2vh 2vw; /* Ajusté pour une meilleure adaptabilité */
+    vertical-align: middle;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 1vh; /* Ajusté pour un espacement vertical plus fluide */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    font-family: var(--font-stack);
+    width: 100%;
+    padding: 1.5vh 2vw; /* Ajusté pour la largeur et la hauteur du padding */
+    margin-top: 1vh; /* Marges adaptées pour un espacement fluide */
+}
+
+.contact-form button {
+    margin-top: 2vh;
+    margin-left: 1.5vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    align-items: center;
+    width: 100%;
+    
+    background-color: #CEA4A0;
+    color: white;
+    font-size: 1.5vw; /* Correspond à 18px sur les grands écrans */
+    font-weight: 600;
+    border: none;
+    border-radius: var(--hlts-glry-radius);
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #333333;
+
+}
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 80vw; /* Utilisation de presque toute la largeur de l'écran */
+        padding: 4vw 0.1vw; /* Padding augmenté pour améliorer le confort de lecture */
+    }
+
+    .contact-form label {
+        margin-top: 1vh; /* Marges verticales légèrement augmentées */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        padding: 2vh 2vw; /* Plus d'espace dans les champs pour une meilleure expérience utilisateur */
+        margin-top: 2vh; /* Espacement entre les champs légèrement augmenté */
+        margin-right: 2vh;
+    }
+
+    .contact-form button {
+        margin-top: 3vh;
+        margin-left: 0;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        font-size: 4vw; /* Texte du bouton plus grand pour les petits écrans */
+    }
+}
+
+
+.row2 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.5rem;
+    justify-content: center;
+   
+    gap: 60px;
+    row-gap: 20px;
+      
+}
+@media (min-width: 280px){
+    .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.5rem;
+    justify-content: center;
+   
+    gap: 10px;
+    row-gap: 2px;
+}
+}
+
+
+@media (min-width: 375px){
+    .row2 {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.5rem;
+    justify-content: center;
+   
+    gap: 10px;
+    row-gap: 2px;
+}
+}
+
+@media (min-width: 576px){
+    .row2 {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.5rem;
+    justify-content: center;
+   
+    gap: 10px;
+    row-gap: 2px;
+}
+}
+
+
+
+@media (min-width: 768px){
+    .row2 {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.5rem;
+    justify-content: center;
+   
+    gap: 10px;
+    row-gap: 2px;
+}
+}
+@media (min-width: 768px){
+    .fa-instagram {
+        font-size: 20vw;
+        margin-bottom: 50px;
+        margin-left: 35vw;
+
+    }
+}
+
+
+
+/* Style de la galerie */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr)); /* Grille adaptative avec une largeur minimale de 25vw */
+    gap: 2vw; /* Espace entre les images basé sur la largeur de l'écran */
+    padding: 2vw; /* Espace autour de la galerie */
+    margin-top: 12vh;
+    overflow: hidden;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5vw; /* Coins arrondis basés sur la largeur de l'écran */
+}
+
+.gallery-item img {
+    width: 100%; /* L'image occupe toute la largeur du conteneur */
+    height: auto; /* La hauteur s'ajuste en fonction de la largeur */
+    display: block;
+    object-fit: cover; /* Garde les proportions de l'image tout en couvrant le conteneur */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+.gallery:hover .gallery-item {
+    opacity: 1;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond noir transparent */
+    color: white;
+    text-align: center;
+    padding: 1.5vw; /* Ajuste le padding en fonction de la largeur de l'écran */
+    opacity: 0;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1; /* Affiche l'overlay au survol */
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 2vw; /* Taille du texte basée sur la largeur de l'écran */
+    font-weight: 500;
+    color: #CEA4A0;
+}
+
+.description {
+    margin: 0;
+    font-size: 1.5vw; /* Taille du sous-texte basée sur la largeur de l'écran */
+    font-weight: 200;
+    color: white;
+    font-style: italic;
+}
+
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(45vw, 1fr)); /* La largeur des colonnes est ajustée pour les petits écrans */
+        gap: 3vh; /* Espace plus important entre les images sur mobile */
+        padding: 4vw; /* Espace plus grand autour de la galerie sur mobile */
+    }
+
+    .gallery-item {
+        border-radius: 3vw; /* Augmente le radius pour un effet plus arrondi sur mobile */
+    }
+
+    .overlay h3 {
+        font-size: 4vw; /* Taille du texte plus grande pour la lisibilité sur mobile */
+
+    }
+
+    .overlay p {
+        font-size: 3vw; /* Taille du sous-texte adaptée pour mobile */
+        
+    }
+
+    .gallery-item img {
+        height: 35vh; /* Limite la hauteur des images pour les petits écrans */
+    }
+    .description {
+        font-size: 3vw;
+    }
+}
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #121212;
+  }
+  
+  img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+  }

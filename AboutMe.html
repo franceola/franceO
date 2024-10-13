@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Sticky Navbar</title>
+   
+    <script src="https://kit.fontawesome.com/3f09d9b6d4.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="image/favicon-32x32.png">
+    <link href="style.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("nNIoHkEWuc_pw1FeM");
+      })();
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image/Logo-F.O-B.png" alt="Logo" class="header-logo" id="logo">
+                <a href="index.html"> 
+           </a>
+        </div>
+        <div id="burgerButton" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutMe.html">About</a></li>
+            
+            <li><a href="My-work.html">My work</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+                
+                
+           
+        </ul>
+    </nav>
+            
+                <!-- About Me Modal -->
+            </section>        
+            <!-- Modal content -->
+            <header class="header-container">
+                
+                <div class="full-width-photo-container">
+                    <img src="image/Regard d'oiseau.jpeg" alt="bird" class="full-width-photo">
+                        
+                       
+                
+            </header>
+<div class="container">
+    <h5 class="about-text">HEY THERE!</h5>
+    <h5 class="autre-sub"><strong style="color: #CEA4A0;">I’m France Ola, a photographer with a passion for capturing the little moments that tell big stories.</strong> When I’m not behind the camera, you’ll find me… behind my keyboard!  Why? Well, I love a good challenge! So, I decided to code this entire website on my own! Between writing lines of code and snapping shots, I love pushing my limits and learning new things. This site is both my showcase and my little geeky playground. So, welcome to my visual—and slightly techy—world!"</h5>
+</div> 
+    <div class="full-width-photo">
+        <img src="image/dragonfly.jpeg"alt="dragonfly" class="full-width-photo"> 
+    </div> 
+    <div class="container">
+        <h5 class="about-text">Eternal, Wildlife, Narratives</h5>
+        <h5 class="autre-sub">"Behind every capture, a profound story unfolds, transforming fleeting wildlife moments into enduring, inspirational visual tales."</h5>
+    </div>
+        <div class="full-width-photo">
+        <img src="image/Morcotte.jpeg"alt="Morcotte" class="full-width-photo"> 
+        </div>
+    
+<!-- contact form -->  
+<div class="container">
+<div class="contact-form">
+    <h5 class="about-text ">Contact Me</h5>
+    <form id="contactForm" action="https://formspree.io/f/xanwkngd" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea class="textarea" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+        <p id="confirmationMessage" style="display:none; color: #CEA4A0;">Thank you! Your message has been sent successfully.</p>
+    </form>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche le formulaire de recharger la page
+            
+            var form = event.target;
+            var formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(function(response) {
+                if (response.ok) {
+                    document.getElementById('confirmationMessage').style.display = 'block';
+                    form.reset(); // Réinitialise le formulaire après l'envoi
+                } else {
+                    alert('Oops! There was an error sending your message. Please try again.');
+                }
+            }).catch(function(error) {
+                alert('Oops! There was an error sending your message. Please try again.');
+            });
+        });
+    </script>
+</div>
+</div>    
+
+
+      
+                   
+                        
+    
+
+                          

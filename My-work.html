@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Responsive Sticky Navbar</title>
+       
+        <script src="https://kit.fontawesome.com/3f09d9b6d4.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/png" href="image/favicon-32x32.png">
+        <link href="style.css" rel="stylesheet">
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+          (function() {
+            emailjs.init("nNIoHkEWuc_pw1FeM");
+          })();
+        </script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/Logo-F.O-B.png" alt="Logo" class="header-logo">
+                </a>
+            </div>
+            <div id="burgerButton" class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutMe.html">About</a></li>
+                
+                <li><a href="My-work.html">My work</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+               
+            </ul>
+        </nav>
+        <div class="row3">
+            <div class="col-12 text-center">
+            <h5 class="title-LW" id="modalTitle">My work at a glance</h5>
+            <h5 class="text-LW">Discover the enchanting beauty of South Korea</h5>
+            </div>
+          
+      </div>
+      <div class="container7">
+          <div class="row4">
+            <div class="col-md-6 col-12 text-center">
+            <img src="image/Temple_Serenity.jpeg" alt="Temple Serenity" class="modal-image">
+            <h5 class="title2-LW">Temple Serenity</h5>
+            <h5 class="text2-LW">The serene majesty of these historic sanctuaries, where ancient stones whisper tales of time and tradition.</h5>
+            </div>
+          <div class="col-md-6 col-12 text-center mt-md-0 mt-2">
+            <img src="image/Floral_Wonders.jpeg" alt="Floral Wonders" class="modal-image">
+            <h5 class="title2-LW">Floral Wonders</h5>
+            <h5 class="text2-LW">Explore the vibrant beauty of floral landscapes and the delicate details of Korean flowers</h5>
+          </div> 
+          </div>
+      </div>
+  </section>
+  <hr class="l2-horizontal-rule spacing-section" aria-hidden="true">
+      <section>
+          <div class="row3">
+              <div class="col-12 text-center">
+              <h5 class="title-LW">A brief glance</h5>
+              <h5 class="text-LW">Join me in exploring the world of wildlife through my lens.</h5>
+              </div> 
+           </div>   
+      </section>
+
+      <section>
+          <div class="row4">
+              <div class="col-md-6 col-12 text-center">
+              <h5 class="title2-LW">The Magic of Birdlife</h5>
+              <a href="Gallery.html"> 
+              <img src="image/oiseau_mesange_bleue.JPG" alt="oiseau_mesange_bleue" class="modal-image">
+              </a>
+          </div>
+          
+         
+              <div class="col-md-6 col-12 text-center mt-md-0 mt-3">
+                 <h5 class="title2-LW">Amazing Insects</h5> 
+                 <a href="Gallery.html">  
+              <img src="image/insect_papillon.jpeg" alt="insect_papillon" class="modal-image">
+                 </a>
+             
+          </div>
+              </div>
+              <div class="row4">
+
+              <div class="col-md-6 col-12 text-center">
+                  
+                  <h5 class="title2-LW">Animal Kingdom's</h5>
+                  <a href="Gallery.html">
+                  <img src="image/Suricate.jpeg" alt="Suricate" class="modal-image">
+                  
+              </div>
+              
+                  <div class="col-md-6 col-12 text-center mt-md-0 mt-3">
+                  <h5 class="title2-LW">Beauty of Flowers</h5> 
+                  <a href="Gallery.html">    
+                  <img src="image/Hibiscus.jpeg" alt="Hibiscus" class="modal-image">
+                  <div class="protection-layer"></div>
+                  </a>
+              </div>    
+          </div>
+      </section>
+  <hr class="l2-horizontal-rule spacing-section" aria-hidden="true">
+
+      <!-- Modal invitation to instagram -->    
+      <section>
+          <div class="container4">
+          <div class="row2">
+               <h5 class="title-LW">Discover Wildlife Through My Lens</h5>
+              <div class="col-1 text-center2">
+                  <h5 class="text-LW"> Discover a world of natural wonders on my Instagram! Dive into the elegance and majesty of birds in their habitats, and marvel at the vibrant colors and hidden beauty of Earth's smallest creatures. Be inspired by the diversity and magic of the avian world and the miniature wonders around us. Join me on this inspiring journey and enjoy your visual trip!</h5>
+              </div>        
+                  <div class="col-md-1 col-1 mt-md-0 mt-2">
+                      <a href="https://www.instagram.com/france.ola_photography" class="fa-brands fa-instagram" target="_blank" rel="noopener noreferrer"></a>
+                  </div>
+              </div>
+          </div>
+      </section>
+      </div>
+          </div>
+         
+      </section>
+  </section>        
+ 
+  <script>
+      
+      document.addEventListener('contextmenu', function(e) {
+if (e.target.tagName === 'IMG') {
+e.preventDefault();
+alert("L'enregistrement des images n'est pas autorisé sur ce site.");
+}
+}, false);
+
+  
+      document.addEventListener('keydown', function(e) {
+if (e.ctrlKey || e.altKey || e.metaKey) {
+e.preventDefault();
+return false;
+
+}
+});
+
+    </script>
+  <script src="login.js"></script>
+ 
+  
+</body>
+</html>
